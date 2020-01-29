@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chain.blog.dao.TypeDao">
+    <select id="getType" resultType="com.chain.blog.entity.Type">
+        select * from  type where id=#{id}
+    </select>
+    <insert id="saveType" >
+        insert into type  (name) value (#{name})
+    </insert>
+    <update id="updateType">
+        update type set name = #{type.name} where  id = #{id}
+    </update>
+    <delete id="deleteType">
+        delete from  type  where  id = #{id}
+    </delete>
+
+    <select id="getTypes" resultType="com.chain.blog.entity.Type">
+        select * from type
+        <if test="page != null">
+            <if test="size ! =null">   limit #{page} , #{size}</if>
+        </if>
+
+    </select>
+
+
+
+</mapper>

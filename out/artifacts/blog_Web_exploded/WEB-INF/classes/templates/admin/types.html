@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:insert="admin/fragments::head('分类管理')"></head>
+
+<body>
+    <!-- 导航 -->
+  <nav th:insert="admin/fragments::menu(2)"></nav>
+<!-- 二级导航 -->
+  <div class="ui attached pointing menu">
+    <div class="ui container">    
+      <a href="" class="item">发布</a>
+      <a href="" class="active item">列表</a>
+    </div>
+
+  </div>
+  <!-- 中间内容 -->
+  <div class="m-container-small m-padding-tb-big">
+  
+    <div class="ui container">
+
+      <table class="ui table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>名称</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="type,iterStat : ${page.contents}">
+            <td th:text="iterStat.count">1</td>
+            <td th:text="${type.name}">刻意练习清单</td>
+              <td><a href="#" th:href="${/admin/types/{id}/input(id=${type.id})}" class="mini ui tea button">编辑</a>
+              <a href="" th:href="${/admin/types/{id}/delete(id=${type.id})}" class="mini ui tea button">删除</a>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="6">
+              <div class="ui  pagination menu">
+                <a  th:href="${/admin/types/{id}/input(id=${type.id})}"  class=" item">上一页</a>
+                <a  th:href="${/admin/types/{id}/input(id=${type.id})}" class=" item">下一页</a>
+              </div>
+              <a th:href="${/admin/types}" class="ui right floated  teal basic button">新增</a>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+     </div>
+    </div>
+  
+
+
+
+
+  <!-- 底部 -->
+<footer th:insert="fragments::footer"></footer>
+</body>
+
+  <script>
+ $(".m-control-show").click(function(){
+     $('.m-item').toggleClass('m-mobile-hide');
+ });
+
+ //下拉注销控制
+ $('.ui.dropdown').dropdown({
+   on:'hover'
+ });
+</script>  
+

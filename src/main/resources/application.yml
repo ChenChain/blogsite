@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  profiles:
+    active: dev
+
+
+#
+#pagehelper:
+#
+#  helperDialect: mysql
+#
+#  reasonable: true
+#
+#  supportMethodsArguments: true
+#
+#  params: count=countSql
+
+
+#  file:
+#    path: log/blog.log #��־�ļ�λ��
+
+#https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md
+pagehelper:
+  row-bounds-with-count: true
+  reasonable: true
+  support-methods-arguments: true
+

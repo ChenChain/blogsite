@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chain.blog.dao.BlogDao">
+
+
+    <select id="getBlog" resultType="com.chain.blog.entity.Blog">
+        select * from blog where id=#{id}
+    </select>
+
+    <select id="blogs" resultType="com.chain.blog.cond.BlogCond">
+        select blog.id as blogId, blog.title as blogTitle, type.name as typeName ,blog.recommend as
+        isCommend,blog.updateTime as updateTime ,blog.published as isPublished from blog,type
+        <where>
+            blog.typeId=type.id
+            <if test="search1!=null">
+                and blog.title like '%${search1}%'
+            </if>
+            <if test="s2!=null">
+                and blog.content like '%${s2}%'
+            </if>
+
+        </where>
+
+
+    </select>
+
+    <insert id="saveBlog">
+        insert into blog (title, content, firstPicture, flag, viewed, appreciation, sharestatement, commentabled, published, recommend, createTime, updateTime, userId, typeId,description)
+        values  ( #{title}, #{content}, #{firstPicture}, #{flag},#{viewed}, #{appreciation}, #{sharestatement}, #{commentabled}, #{published}, #{recommend}, #{createTime}, #{updateTime}, #{userId}, #{typeId},
+        #{description}
+        )
+    </insert>
+
+    <delete id="deleteBlog">
+        delete from blog where id =#{id}
+    </delete>
+
+    <update id="updateBlog">
+
+        update blog set title=#{blog.title},content=#{blog.content},firstPicture=#{blog.firstPicture},flag=#{blog.flag},viewed=#{blog.viewed},
+        appreciation=#{blog.appreciation},
+        sharestatement=#{blog.sharestatement},commentabled=#{blog.commentabled},
+        published=#{blog.published},recommend=#{blog.recommend},
+        createTime=#{blog.createTime},updateTime=#{blog.updateTime} ,userId=#{blog.userId}, typeId=#{blog.typeId},description=#{description}
+        where  id=#{blog.id}
+
+
+
+    </update>
+
+</mapper>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragment :: head('博客')">
+</head>
+
+<body>
+    <!-- 导航 -->
+  <nav  th:insert="fragment :: menu(4)" ></nav>
+  <!-- 中间内容 -->
+  <div  class="m-container-small m-padding-tb-big">
+    <div class="ui container">
+        <div class="ui top attached segment">
+            <!--头部  -->
+            <div class=" ui horizontal link list">
+                <div class="item">
+                    <img src="./images/testgray.jpg" alt="" class="ui avatar image">
+                    <div class="content"><a href="#" class="hearer">chain</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>2017-10-01
+                    <i class="item eye icon"></i>2342
+                </div>
+               
+            </div>
+        </div>
+        <div class="ui attached segment">
+            <!-- 图片 -->
+            <img src="https://unsplash.it/800/450?image=1005" alt="" class="ui fluid image rounded">
+        </div>
+        <div class="ui attached padded segment" id="waypoint">
+            <!-- 内容 -->
+            <div class="ui segment right aligned basic">
+              <div class="ui orange label">原创
+              </div>
+            </div>
+            <h2 class="ui header center aligned">刻意联系的清单的啊啊啊</h2>
+            <div id="content" class="m-padded-lr-responsive js-toc-content">
+                <h3>1</h3>
+                <p>啊实打实的大苏打大苏打地区的气温的大苏打阿斯顿顶顶顶顶顶顶顶顶顶顶啊杀杀杀杀杀杀杀杀杀</p>
+                <h3>2</h3>
+                <p>asda啊实打实大撒旦请问</p>
+                <h3>3</h3>
+                <p>asda啊实打实大撒旦请问</p>
+
+            </div>
+            <!-- 标签 -->
+            <div class="m-padded-lr">
+                <div class="ui basic teal left pointing label">方法论</div>
+            </div>
+            <!-- 赞赏 -->
+            <div class="ui segment center aligned basic">
+                <button id="payButton"  class="ui orange circular basic button">赞赏</button>
+            </div>
+            <div class="ui payQR flowing popup transition hidden" >
+            <div class="ui orange basic label">
+                <!-- 支付宝与微信的二维码 -->
+                <div class="ui images" style="font-size: inherit !important;">
+                    <div class="image">
+                        <img src="./images/testgray.jpg" alt="" class="ui rounded bordered image">
+                        <div>支付宝</div>
+                    </div>
+                    <div class="image">
+                        <img src="./images/testgray.jpg" alt="" class="ui rounder bordered image">
+                        <div>微信</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="ui attached positive message">
+            <!-- 博客信息 -->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ul class="list">
+                        <li>作者</li>
+                        <li>发表时间</li>
+                        <li>版权声明</li>
+                        <li>啊是大多数</li>
+                    </ul>
+                </div>
+                <div class="five wide column">
+                    <img src="./images/testgray.jpg" alt="" class="ui right floated  rounded bordered image">
+                </div>
+            </div>
+        </div>
+        <div class="ui bottom attached segment">
+            <!-- 留言区域 -->
+            <div class="ui teal segmen" id="comment-container">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img src="./images/testgray.jpg">
+                      </a>
+                      <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                          <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                          How artistic!
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img src="./images/testgray.jpg">
+                      </a>
+                      <div class="content">
+                        <a class="author">Elliot Fu</a>
+                        <div class="metadata">
+                          <span class="date">Yesterday at 12:30AM</span>
+                        </div>
+                        <div class="text">
+                          <p>This has been very useful for my research. Thanks as well!</p>
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                      <div class="comment">
+                        <a class="avatar">
+                          <img src="./images/testgray.jpg">
+                        </a>
+                        <div class="content">
+                          <a class="author">Jenny Hess</a>
+                          <div class="metadata">
+                            <span class="date">Just now</span>
+                          </div>
+                          <div class="text">
+                            Elliot you are always so right :)
+                          </div>
+                          <div class="actions">
+                            <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="./images/testgray.jpg">
+                  </a>
+                  <div class="content">
+                    <a class="author">Joe Henderson</a>
+                    <div class="metadata">
+                      <span class="date">5 days ago</span>
+                    </div>
+                    <div class="text">
+                      Dude, this is awesome. Thanks so much
+                    </div>
+                    <div class="actions">
+                      <a class="reply">Reply</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <!-- 表单提交 -->
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="content" placeholder="请输入评论信息...">
+                        </textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-mini">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="姓名">
+                            </div>
+                            
+                        </div>
+                        <div class="field  m-mobile-wide m-margin-bottom-mini">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="field  m-mobile-wide m-margin-bottom-mini">
+                            <button class="ui teal button m-mobile-wide m-margin-bottom-mini"><i class="edit icon"></i>发布</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        
+        
+        </div>
+        
+    </div>
+
+
+    </div>
+
+  <br/> <br/>
+  <br/> <br/>
+  <br/> <br/>
+  <br/> <br/>
+
+
+  <div id="toolButtons" class="ui vertical icon buttons m-fixed m-right-bottom" style="display: none;">
+   <button class="ui toc teal button" type="button">目录</button>
+   <a href="#comment-container" class="ui teal button" type="button">留言</a>
+   <button class="ui wechat teal icon button" type="button"><i class="weixin icon"></i>二维码</button>
+   <a href="#"  class="ui teal icon button" type="button"><i class="chevron up icon"></i></a>
+  </div>
+
+  <div class="ui toc-container flowing popup transition hidden" >
+    生成的目录
+    <ol class="js-toc"></ol>
+  </div>
+
+
+  <div class="ui wechat-qr flowing popup transition hidden" id="qrcode" >
+</div>
+
+  <!-- 底部 -->
+
+  <footer th:insert="fragment:: footer"></footer>
+</body>
+
+  <script>
+ $(".m-control-show").click(function(){
+     $('.m-item').toggleClass('m-mobile-hide');
+ });
+
+
+//  赞赏控制显示
+$("#payButton").popup({
+    popup : $('.payQR.popup'),
+    on : 'click',
+    position : 'bottom center'
+});
+
+//目录弹出
+$(".toc.button").popup({
+    popup : $('.toc-container.popup'),
+    on : 'click',
+    position : 'left center'
+});
+
+//目录初始化
+tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '.js-toc',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '.js-toc-content',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h1, h2, h3',
+  // For headings inside relative or absolute positioned containers within content.
+  hasInnerContainers: true,
+});
+
+
+$(".wechat").popup({
+  popup:$('.wechat-qr'),
+  on:'hover',
+  position:"left center"
+ });
+
+
+ var qrcode = new QRCode("qrcode", {
+    text: "http://jindo.dev.naver.com/collie",
+    width: 100,
+    height: 100,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+
+
+var waypoint = new Waypoint({
+  element: document.getElementById('waypoint'),
+  handler: function(direction) {
+    console.log('Scrolled to waypoint :'+direction)
+    if(direction=='down'){
+      $("#toolButtons").show(500);
+    }else{
+      $("#toolButtons").hide(500);
+    }
+  }
+})
+</script>  
+
+</html>
