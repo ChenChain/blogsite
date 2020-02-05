@@ -15,4 +15,5 @@ public interface TypeService {
     int updateType(int id,Type type);
     List<Type> getTypes();
     void deleteType(int id);
+
 }

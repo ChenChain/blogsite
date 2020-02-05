@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:insert="fragment :: head('首页')">
+<head th:insert="/bootstraphtml/fragments::head('首页')"></head>
 </head>
-<script src="./js/jquery-3.4.1.js"></script>
+<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
+<link href="/js/pageAjax.css" rel="stylesheet">
+<script src="/js/pageAjax.js"></script>
+
+<!-- 控制宽度的自动适应 -->
+
+<style type="text/css">
+    .comments {
+        width:100%;/*自动适应父布局宽度*/
+        border: none;
+        resize: none;
+        overflow:auto;
+        word-break:break-all;
+
+        /*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时，
+        当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/
+    }
+    a:hover{
+        cursor: pointer;
+    }
+</style>
+
 <body>
     <!-- 导航 -->
-    <nav th:insert="fragment :: menu(1)"></nav>
+    <nav th:insert="/bootstraphtml/fragments::navigation(1)"></nav>
   <!-- 中间内容 -->
   <div class="m-padding-tb-large">
       <!-- container使页面对于不同尺寸有较好的适配 -->
@@ -21,118 +42,25 @@
                       <div class="ui teal header">博客</div>
                   </div>
                   <div class="column right aligned">
-                        共<h3 class="ui orange header m-inline-block">14</h3>篇
+                        共<h3 class="ui orange header m-inline-block" id="blog_num">14</h3>篇
                   </div>
                 </div>
             </div>
             <!-- blog列表 -->
-            <div class="ui attached   segment">
-                <div class="ui padded  vertical segment">
-                    <div class="ui grid">
-                        <div class="eleven wide column ">
-                                <h3 class="ui header">你理解什么是理论吗</h3>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                            <!-- 头像 更新时间 浏览次数 -->
-                                            <div class=" ui horizontal link list">
-                                                <div class="item">
-                                                    <img src="./images/testgray.jpg" alt="" class="ui avatar image">
-                                                    <div class="content"><a href="#" class="hearer">chain</a></div>
-                                                </div>
-                                                <div class="item">
-                                                    <i class="calendar icon"></i>2017-10-01
-                                                    <i class="item eye icon"></i>2342
-                                                </div>
-                                               
-                                            </div>
-                                    </div>
-                                    <div class="   right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
-                                        
-                                    </div>
-                                </div>
-                        </div>
-                        <!-- 存放图片 -->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <!-- <img src="http://dmimg.5054399.com/allimg/pkm/pk/22.jpg" alt="" width="400px" height="800px"> -->
-                                <div class="ui segment " style="width: 800; height: 400;">pic</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ui padded  vertical segment">
-                    <div class="ui grid ">
-                        <div class="eleven wide column ">
-                                <h3 class="ui header">你理解什么是理论吗</h3>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                                
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                            <!-- 头像 更新时间 浏览次数 -->
-                                            <div class=" ui horizontal link list">
-                                                <div class="item">
-                                                    <img src="./images/testgray.jpg" alt="" class="ui avatar image">
-                                                    <div class="content"><a href="#" class="hearer">chain</a></div>
-                                                </div>
-                                                <div class="item">
-                                                    <i class="calendar icon"></i>2017-10-01
-                                                    <i class="item eye icon"></i>2342
-                                                </div>
-                                               
-                                            </div>
-                                    </div>
-                                    <div class="   right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
-                                        
-                                    </div>
-                                </div>
-                        </div>
-                        <!-- 存放图片 -->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <!-- <img src="http://dmimg.5054399.com/allimg/pkm/pk/22.jpg" alt="" width="400px" height="800px"> -->
-                                <div class="ui segment " style="width: 800; height: 400;">pic</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="ui attached segment" id="blogList">
 
             </div>
-            <!-- 底部 -->
-            <div class="ui bottom attacher segment">
-                <div class="ui top attached segment">
 
-                    <div class="ui middle aligned two column grid">
-                      <div class="column">
-                          <a href="" class="ui mini teal basic button">上一页</a>
-                      </div>
-                      <div class="column right aligned">
-                        <a href="" class="ui mini teal basic button">下一页</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
+            <!--            底部分页-->
+        <div id="page"></div>
         </div>
         <!-- 右边部分 -->
         <div class="five wide column">
-            <h4 class="ui segments">
+            <div class="ui segments">
                 <div class="ui secondary  segment">
                     <div class="ui grid">
                         <div class="ten wide column">
-                           <i class="idea icon"></i>分类
+                           <i class="idea icon"></i>心情
                         </div>
                         <div class="six wide column right aligned">
                             <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
@@ -142,63 +70,17 @@
                 <!-- 分类 -->
                 <div class="ui teal segment">
                     <div class="ui fluid vertical menu">
-                        <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
+                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
+                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
+                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
                         <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
                         <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
                         
                     </div>
                 </div>
-                <!-- 标签 -->
-                <div class="ui segments">
-                    <div class="ui secondary  segment">
-                        <div class="ui grid">
-                            <div class="ten wide column">
-                               <i class="tags icon"></i>标签
-                            </div>
-                            <div class="six wide column right aligned">
-                                <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui segment teal ">
-                        <a class="ui teal basic left pointing label m-margin-tb-tiny">方法论<div class="detail">12</div></a>
-                        <a class="ui teal basic left pointing label m-margin-tb-tiny">方法论<div class="detail">12</div></a> <a class="ui teal basic left pointing label">方法论<div class="detail">12</div></a>
-                        <a class="ui teal basic left pointing label m-margin-tb-tiny">方法论<div class="detail">12</div></a>
 
-                    </div>
-                </div>
 
-                <!-- 最新推荐 -->
-                <div class="ui segments">
-                    <div class="ui secondary  segment">
-                       
-                            <div class="">
-                               <i class="bookmark icon"></i>推荐
-                            </div>
-                            <div class="ui segment ">
-                                <a href="#">用户故事</a>
-                            </div>
-                            <div class="ui segment  ">
-                                <a href="#" class=" m-black">用户故事</a>
-                            </div>
-                            <div class="ui segment">
-                                <a href="#">用户故事</a>
-                            </div>
-                            <div class="ui segment">
-                                <a href="#">用户故事</a>
-                            </div>
-                    </div>
-                </div>
 
-                <!-- 二维 -->
-                <h4 class="ui horizontal divider header">
-                    扫码关注我
-                </h4>
-                <div class="ui card">
-                    <img src="./images/testgray.jpg" alt="" class="ui round image">
-                </div>
 
             </div>
         </div>
@@ -212,13 +94,89 @@
 
 
   <!-- 底部 -->
-<footer th:insert="fragment::footer" ></footer>
+    <footer th:insert="/bootstraphtml/fragments::footer"></footer>
 
 
 </body>
 <script>
+
+
     $(".m-control-show").click(function(){
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+
+    //分页
+    //填充html
+    var html="";
+    //分页
+    $("#page").paging(
+        {
+            url:"/list",
+            nowPage: 1,
+            canJump: 1,
+            showOne: 0,
+            pageSize: 3,
+            callback:function (data) {
+                //data 即为ajax传递过来的查询数据
+                //渲染
+                data=JSON.parse(data);//JSON对象
+                var blog_num=data.total;
+                $("#blog_num").empty();
+                $("#blog_num").append(blog_num);
+                listObj=data.list;//list列表 blogs
+                $("#blogList").empty();
+                $("#blogList").append( drawBlogs(listObj));
+            }
+        }
+    );
+
+    //渲染博客页面
+    var drawBlogs=function (datas) {
+        html="";
+        for (var i = 0; i <datas.length ; i++) {
+            var data=datas[i];
+            var blogUrl="/blog/"+data.blogId;
+            var blogA='<a href="' + blogUrl +'">'+ data.blogTitle+'</a>';
+            html+=
+                '<div class="ui padded  vertical segment">'+
+        '<div class="ui grid "><div class="eleven wide column ">'+
+
+
+                '<h3 class="ui header">'+
+
+                    blogA
+
+                +'</h3>'+
+
+                '<div class="ui segment" ><div style="width: auto; height: 400;"> <textArea readonly class="comments" rows=5  cols=27   onpropertychange= "this.style.posHeight=this.scrollHeight">'+
+                data.description+
+                '</textArea> </div> </div>'+
+
+                '<div class="ui grid">'+
+                '<div class="eleven wide column">'+
+            '<div class=" ui horizontal link list">'+
+                '<div class="item">'+
+                '<i class="calendar icon"></i>'+data.updateTime+
+                '<i class="item eye icon"></i>'+data.viewed+
+                '<a class="ui teal basic label m-padded-mini">'+data.typeName+'</a>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+
+                '<div class="five wide column">'+
+
+                '<div class="ui segment " style="width: 100%; height: 100%;">'+
+                '<img  src="'+ data.firstPicture+ '" style="width: 100%; height: 100%;">'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
+        }
+        return html;
+    }
 </script>
+
 </html>

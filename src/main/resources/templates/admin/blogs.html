@@ -74,16 +74,7 @@
           </tr>
         </thead>
         <tbody id="blogsList">
-<!--          <tr>-->
-<!--            <td>0</td>-->
-<!--            <td>1</td>-->
-<!--            <td>1</td>-->
-<!--            <td>1</td>-->
-<!--            <td>1</td>-->
-<!--            <td><a href="" class="mini ui tea button">编辑</a>-->
-<!--              <a href="" class="mini ui tea button">删除</a>-->
-<!--            </td>-->
-<!--          </tr>-->
+
         </tbody>
         <tfoot>
 
@@ -149,6 +140,7 @@
       var fn="deleteClick";
       for(var i=0;i<datas.length;i++) {
           var data=datas[i];
+
           var id=i+1;
           editUrl+=data.blogId+"/input";
           html += '<tr>' +
@@ -170,10 +162,10 @@
       $('.ui.type.dropdown').dropdown('clear');
     });
 
-  // var deleteClick=function () {
-  //   alert(1);
-  // }
 
+
+
+//删除博客
     $("#blogsList").on("click","button",function () {
       var id=$(this).attr("id");
       if(confirm("确认删除该博客？")) {

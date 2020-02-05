@@ -17,4 +17,6 @@ public class Type {//t_type
     private int id;
     private String name;
 
+    //存放关联的blog id
+    private List<Integer> blogList;
 }

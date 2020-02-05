@@ -129,7 +129,7 @@
 
                     },
                     success:function(data){
-                        var pages=data.total; //pageHelp的pageInfo的数据中的总页码数
+                        var pages=data.pages; //pageHelp的pageInfo的数据中的总页码数
                         me.options.pageNum=pages;//更新总页码数
                         //请求成功后，更新总页码
                         $("#lastPage").text("尾页："+pages);//页码渲染

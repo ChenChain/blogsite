@@ -1,12 +1,9 @@
 package com.chain.blog.dao;
 
 import com.chain.blog.entity.Type;
-import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author: chain
@@ -23,6 +20,7 @@ public interface TypeDao {
     int updateType(int id, Type type);
 
     void deleteType(int id);
+
 
 
 }

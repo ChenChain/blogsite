@@ -2,8 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chain.blog.dao.BlogDao">
 
+    <select id="selectType"  resultType="String">
+        select  name from type where  id = #{id}
+    </select>
 
-    <select id="getBlog" resultType="com.chain.blog.entity.Blog">
+    <resultMap id="completeBlog" type="com.chain.blog.entity.Blog">
+        <id column="id" property="id"></id>
+        <result property="title" column="title"></result>
+        <result property="content" column="content"></result>
+        <result property="firstPicture" column="firstPicture"></result>
+        <result property="flag" column="flag"></result>
+        <result property="viewed" column="viewed"></result>
+        <result property="appreciation" column="appreciation"></result>
+        <result property="sharestatement" column="sharestatement"></result>
+        <result property="commentabled" column="commentabled"></result>
+        <result property="published" column="published"></result>
+        <result property="recommend" column="recommend"></result>
+        <result property="createTime" column="createTime"></result>
+        <result property="updateTime" column="updateTime"></result>
+        <result property="userId" column="userId"></result>
+        <result property="typeId" column="typeId"></result>
+        <result property="description" column="description"></result>
+        <association property="typename" column="typeId" select="selectType">
+
+        </association>
+    </resultMap>
+
+    <select id="getBlog" resultMap="completeBlog">
         select * from blog where id=#{id}
     </select>
 
@@ -43,9 +68,73 @@
         published=#{blog.published},recommend=#{blog.recommend},
         createTime=#{blog.createTime},updateTime=#{blog.updateTime} ,userId=#{blog.userId}, typeId=#{blog.typeId},description=#{description}
         where  id=#{blog.id}
-
-
-
     </update>
+
+
+    <select id="listBlogTop" resultType="com.chain.blog.cond.BlogCond">
+        select  blog.id as blogId, blog.title as blogTitle  from blog where blog.published=true  and  blog.recommend=true
+    order by  blog.updatetime desc   limit #{size};
+    </select>
+
+
+<!--    首页 搜索页 查询博客-->
+    <select id="indexBlog" resultType="com.chain.blog.cond.BlogIndexCond">
+        select blog.id as blogId, blog.title as blogTitle, type.name as typeName
+        ,blog.updateTime as updateTime ,blog.viewed as viewed,blog.firstPicture as firstPicture, blog.description as description
+         from blog,type
+        <where>
+            blog.published=true
+            and
+            blog.typeId=type.id
+
+            <if test="s2!=null">
+                and blog.content like '%${s2}%'
+            </if>
+
+            <if test="search1!=null">
+                and  ( blog.title like '%${search1}%'
+                or blog.content like '%${search1}%'
+                or type.name like  '%${search1}%' )
+            </if>
+
+
+        </where>
+        order by blog.updateTime desc
+
+    </select>
+
+    <update id="addOnce">
+    update blog set viewed=viewed+1 where id = #{id}
+</update>
+
+
+<!--    List<BlogIndexCond> typeBlogs(int typeId);-->
+    <select id="typeBlogs" resultType="com.chain.blog.cond.BlogIndexCond">
+        select blog.id as blogId, blog.title as blogTitle, type.name as typeName
+        ,blog.updateTime as updateTime ,blog.viewed as viewed,blog.firstPicture as firstPicture, blog.description as description
+        from blog,type
+        <where>
+            blog.typeId=#{typeId}
+            and
+            blog.published=true
+            and
+            blog.typeId=type.id
+        </where>
+        order by blog.updateTime desc
+    </select>
+
+<!--    BlogIndexCond getBlogIndexCond(int id);-->
+<select id="getBlogIndexCond" resultType="com.chain.blog.cond.BlogIndexCond">
+    select blog.id as blogId, blog.title as blogTitle, type.name as typeName
+    ,blog.updateTime as updateTime ,blog.viewed as viewed,blog.firstPicture as firstPicture, blog.description as description
+    from blog,type
+    <where>
+        blog.typeId=type.id
+        and
+        blog.published=true
+        and blog.id=#{id}
+    </where>
+    order by blog.updateTime asc
+</select>
 
 </mapper>

@@ -3,10 +3,8 @@ package com.chain.blog.service.type;
 import com.chain.blog.dao.TypeDao;
 import com.chain.blog.entity.Type;
 import com.chain.blog.exception.NotFoundException;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -55,6 +53,7 @@ public class TypeServiceImpl implements TypeService {
     public void deleteType(int id) {
         typeDao.deleteType(id);
     }
+
 
 
 }

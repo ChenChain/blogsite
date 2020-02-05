@@ -1,14 +1,13 @@
 package com.chain.blog.web;
 
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author: chain
  * @create: 2020/01/18
  **/
-@Controller
+
 public class IndexController {
     @GetMapping("/achieves")
     public String index() {
@@ -40,14 +39,7 @@ public class IndexController {
         return "blog/types";
     }
 
-    @GetMapping("/test1")
-    public String indext(){
-        return "test1";
-    }
-    @GetMapping("/test2")
-    public String index1t(){
-        return "test2";
-    }
+
 
 }
 

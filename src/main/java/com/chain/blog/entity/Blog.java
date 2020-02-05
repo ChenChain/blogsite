@@ -23,7 +23,7 @@ public class Blog { //t_blog
     private String content;
     private String firstPicture;
     private String flag; //标签
-    private Integer viewed;//浏览次数
+    private Integer viewed =0;//浏览次数
     private boolean appreciation;//赞赏 是否开启
     private boolean sharestatement;//转载声明 开启
     private boolean commentabled;//评论是否开启
@@ -34,7 +34,9 @@ public class Blog { //t_blog
 
     private int  userId;//对应的用户id
     private Integer typeId;//对应的类型id
+
     private String tagIds;//标签串
 
     private String description;//描述
+    private String  typename;
 }

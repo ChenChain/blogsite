@@ -24,3 +24,6 @@ public class BlogCond {
     private Boolean isPublished;
     private Date updateTime;
 }
+
+
+

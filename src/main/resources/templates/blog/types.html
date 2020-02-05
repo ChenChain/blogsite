@@ -1,186 +1,126 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:insert="fragment :: head('类别')">
+<head th:insert="/bootstraphtml/fragments::head('分类')"></head>
 </head>
+<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
+<link href="/js/pageAjax.css" rel="stylesheet">
+<script src="/js/pageAjax.js"></script>
 
 <body>
     <!-- 导航 -->
-  <nav  th:insert="fragment :: menu(2)"></nav>
+    <nav th:insert="/bootstraphtml/fragments::navigation(2)"></nav>
+ <input type="hidden" th:value="${activeTypeId}" id="activeTypeId">
   <!-- 中间内容 -->
   <div class="m-container-small m-padding-tb-big">
   
     <div class="ui container">
       <!-- 分类头部 -->
       <div class="ui top attached segment">
-
         <div class="ui middle aligned two column grid">
           <div class="column">
               <div class="ui teal header">分类</div>
           </div>
           <div class="column right aligned">
-                共<h3 class="ui orange header m-inline-block">14</h3>个
+                共<h3 class="ui orange header m-inline-block" th:text="${#arrays.length(types)}">14</h3>个
           </div>
         </div>
     </div>
-    <div class="ui attached segment ">
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic teal button">思考</a>
-        <div class="ui basic teal left pointing label">
+    <div  class="ui attached segment ">
+      <div   th:each="typeIndex:${types}"   class="ui labeled  button m-margin-tb-tiny">
+        <a th:href="@{/alltypes/{typeid}(typeid=${typeIndex.id})}" class="ui basic  button"   th:classappend="${typeIndex.id==activeTypeId} ?'teal'"   th:text="${typeIndex.name}">思考</a>
+        <div class="ui basic  left pointing label"    th:classappend="${typeIndex.id==activeTypeId} ?'teal'"  th:text="${#arrays.length(typeIndex.getBlogList())}">
           24
         </div>
       </div>
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">思考2</a>
-        <div class="ui basic  left pointing label">
-          24
-        </div>
-      </div>
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">思考2</a>
-        <div class="ui basic  left pointing label">
-          24
-        </div>
-      </div>
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">思考2</a>
-        <div class="ui basic  left pointing label">
-          24
-        </div>
-      </div>
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">思考2</a>
-        <div class="ui basic  left pointing label">
-          24
-        </div>
-      </div>
-      <div class="ui labeled  button m-margin-tb-tiny">
-        <a href="#" class="ui basic  button">思考2</a>
-        <div class="ui basic  left pointing label">
-          24
-        </div>
-      </div>
-    
-    
     </div>
 
-    <div class="ui top attached teal segment">
-      <div class="ui padded  vertical segment">
-        <div class="ui grid">
-            <div class="eleven wide column ">
-                    <h3 class="ui header">你理解什么是理论吗</h3>
-                    <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                    <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                    <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                    <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                    <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                    
-                    <div class="ui grid">
-                        <div class="eleven wide column">
-                                <!-- 头像 更新时间 浏览次数 -->
-                                <div class=" ui horizontal link list">
-                                    <div class="item">
-                                        <img src="./images/testgray.jpg" alt="" class="ui avatar image">
-                                        <div class="content"><a href="#" class="hearer">chain</a></div>
-                                    </div>
-                                    <div class="item">
-                                        <i class="calendar icon"></i>2017-10-01
-                                        <i class="item eye icon"></i>2342
-                                    </div>
-                                   
-                                </div>
-                        </div>
-                        <div class="   right aligned five wide column">
-                            <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
-                            
-                        </div>
-                    </div>
-            </div>
-            <!-- 存放图片 -->
-            <div class="five wide column">
-                <a href="#" target="_blank">
-                    <!-- <img src="http://dmimg.5054399.com/allimg/pkm/pk/22.jpg" alt="" width="400px" height="800px"> -->
-                    <div class="ui segment " style="width: 800; height: 400;">pic</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="ui padded  vertical segment">
-      <div class="ui grid">
-          <div class="eleven wide column ">
-                  <h3 class="ui header">你理解什么是理论吗</h3>
-                  <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                  <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                  <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                  <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                  <p>aaaaaaaaaaaaasssssssssssssssss</p>
-                  
-                  <div class="ui grid">
-                      <div class="eleven wide column">
-                              <!-- 头像 更新时间 浏览次数 -->
-                              <div class=" ui horizontal link list">
-                                  <div class="item">
-                                      <img src="./images/testgray.jpg" alt="" class="ui avatar image">
-                                      <div class="content"><a href="#" class="hearer">chain</a></div>
-                                  </div>
-                                  <div class="item">
-                                      <i class="calendar icon"></i>2017-10-01
-                                      <i class="item eye icon"></i>2342
-                                  </div>
-                                 
-                              </div>
-                      </div>
-                      <div class="   right aligned five wide column">
-                          <a href="#" target="_blank" class="ui teal basic label m-padded-mini">认知升级</a>
-                          
-                      </div>
-                  </div>
-          </div>
-          <!-- 存放图片 -->
-          <div class="five wide column">
-              <a href="#" target="_blank">
-                  <!-- <img src="http://dmimg.5054399.com/allimg/pkm/pk/22.jpg" alt="" width="400px" height="800px"> -->
-                  <div class="ui segment " style="width: 800; height: 400;">pic</div>
-              </a>
-          </div>
-      </div>
-  </div>
+    <div class="ui top attached teal segment"  id="blogList">
+
 
     </div>
 
+<!--        分页-->
     <div class="ui bottom attached segment">
       <div class="ui top attached segment">
 
-          <div class="ui middle aligned two column grid">
-            <div class="column">
-                <a href="" class="ui mini teal basic button">上一页</a>
-            </div>
-            <div class="column right aligned">
-              <a href="" class="ui mini teal basic button">下一页</a>
-            </div>
-          </div>
+        <div id="page"></div>
       </div>
   </div>
   
   </div>
 
   </div>
-  
-
-  <br/> <br/>
-  <br/> <br/>
-  <br/> <br/>
-  <br/> <br/>
-
-
-
   <!-- 底部 -->
-<footer th:insert="footer"></footer>
+    <footer th:insert="/bootstraphtml/fragments::footer"></footer>
 </body>
 
   <script>
  $(".m-control-show").click(function(){
      $('.m-item').toggleClass('m-mobile-hide');
  });
+
+
+ //分页
+ //填充html
+ var html="";
+ //分页
+ $("#page").paging(
+     {
+         url:"/typeblogs",
+         nowPage: 1,
+         canJump: 1,
+         showOne: 0,
+         pageSize: 5,
+         search1:$("#activeTypeId").val(), //类型id值
+         callback:function (data) {
+             data=JSON.parse(data);
+             listObj=data.list;
+             $("#blogList").empty();
+             $("#blogList").append( drawBlogs(listObj));
+         }
+     }
+ );
+
+
+ //渲染博客页面
+ var drawBlogs=function (datas) {
+     html="";
+     for (var i = 0; i <datas.length ; i++) {
+         var data=datas[i];
+         html+=
+             '<div class="ui padded  vertical segment">'+
+             '<div class="ui grid "><div class="eleven wide column ">'+
+             '<h3 class="ui header" id="blogTitle">'+ data.blogTitle +'</h3>'+
+
+             '<div class="ui segment" ><div style="width: auto; height: 400;"> <textArea readonly class="comments" rows=5  cols=27   onpropertychange= "this.style.posHeight=this.scrollHeight">'+
+             data.description+
+             '</textArea> </div> </div>'+
+
+             '<div class="ui grid">'+
+             '<div class="eleven wide column">'+
+             '<div class=" ui horizontal link list">'+
+             '<div class="item">'+
+             '<i class="calendar icon"></i>'+data.updateTime+
+             '<i class="item eye icon"></i>'+data.viewed+
+             '<a class="ui teal basic label m-padded-mini">'+data.typeName+'</a>'+
+             '</div>'+
+             '</div>'+
+             '</div>'+
+             '</div>'+
+             '</div>'+
+
+             '<div class="five wide column">'+
+
+             '<div class="ui segment " style="width: 100%; height: 100%;">'+
+             '<img id="firstPic"  src="'+ data.firstPicture+ '"style="width: 100%; height: 100%;">'+
+             '</div>'+
+             '</div>'+
+             '</div>'+
+             '</div>'
+     }
+     return html;
+ }
+
 </script>  
 
 </html>

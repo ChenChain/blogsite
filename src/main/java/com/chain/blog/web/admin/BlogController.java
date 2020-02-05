@@ -109,7 +109,6 @@ public class BlogController {
             attributes.addFlashAttribute("message", "新增失败");
         } else {
             attributes.addFlashAttribute("message", "新增成功");
-
         }
         return "redirect:/admin/blogs";
     }

@@ -29,3 +29,10 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
 
+#用户评论区头像
+comment.avatar: /images/avatar.jpg
+#管理员头像
+admin.avatar: /images/imgAdmin.jpg
+
+
+#  select date_format(updateTime,'%Y') as year from blog  group by year order by year desc;
