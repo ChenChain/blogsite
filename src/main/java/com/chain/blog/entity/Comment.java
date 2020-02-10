@@ -26,9 +26,7 @@ public class Comment {
     private String client;//客户端
     private String email;//评论者邮箱
     private int blogId;//对应的博客id
-
     private Integer parentCommentId;//父级评论id
-
     /**
      * 父级评论对象
      * 不注入数据库

@@ -31,12 +31,11 @@ public class LogAspect {
     public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
 
-//        if(attributes.getRequest()==null) return;
-//        HttpServletRequest request = attributes.getRequest();
-//        String url = request.getRequestURL().toString();
-//        String ip = request.getRemoteAddr();
-        String  url="";
-        String ip="";
+        if(attributes.getRequest()==null) return;
+        HttpServletRequest request = attributes.getRequest();
+        String url = request.getRequestURL().toString();
+        String ip = request.getRemoteAddr();
+
         String method = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         RequestLog requestLog = new RequestLog(url, ip, method, args);//封装

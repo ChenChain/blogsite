@@ -6,6 +6,7 @@ import com.chain.blog.dao.TypeDao;
 import com.chain.blog.entity.Comment;
 import com.chain.blog.entity.Type;
 import com.chain.blog.entity.User;
+import com.chain.blog.service.blog.BlogServce;
 import com.chain.blog.service.comment.CommentServiceImpl;
 import com.chain.blog.service.type.TypeService;
 import com.chain.blog.service.type.TypeServiceImpl;
@@ -15,7 +16,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionContext;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.List;
 
 @SpringBootTest
@@ -24,19 +29,12 @@ class BlogApplicationTests {
     private CommentDao commentDao;
     @Autowired
     private CommentServiceImpl commentService;
+    @Autowired
+    private BlogServce blogServce;
     @Test
     void contextLoads() {
-        List<Comment> allComments=commentDao.listCommentByBlogId(37);
-        List<Comment> allFC=commentDao.firstParentComment(37);
-        List<Comment> allSC=commentDao.getAllBlogSonComment(37);
-        System.out.println(allComments.size() + " "+allFC.size()+"  "+ allSC.size());
-        //   System.out.println( commentService.getCommentTree(allFC.get(0),allSC));
-//
-//        commentService.getVoidSingleTreeComment(allFC.get(0),allComments);
-        System.out.println(
-            commentService.getWholeCommentTreeAdvanced(allComments)
-        );
-
+        System.out.println(blogServce.getBlog(45).getUpdateTime());
+        System.out.println(blogServce.getBlogIndexCond(45).getUpdateTime());
     }
 
 }

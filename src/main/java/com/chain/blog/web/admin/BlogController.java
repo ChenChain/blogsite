@@ -12,6 +12,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,6 +40,9 @@ public class BlogController {
 
     @Autowired
     private TagService tagService;
+
+    @Value("${blog.initFirstPic}")
+    private String initFirstPic;
 
 //    @ResponseBody
 //    @GetMapping("/blogs")
@@ -98,6 +102,11 @@ public class BlogController {
 //        blog.setUserId(u.getId());
         Integer blogId = blog.getId();
         int a = 0;
+        if (blog.getFirstPicture()==null||blog.getFirstPicture()==""){
+            String fp=initFirstPic;
+            blog.setFirstPicture(initFirstPic);
+        }
+
         if (blogId==0) {
             //保存 即 新增
             a = blogServce.saveBlog(blog);
@@ -119,7 +128,6 @@ public class BlogController {
     public String editInput(Model model, @PathVariable("id") int id) {
         //初始化标签 类型
         model.addAttribute("types", typeService.getTypes());
-        model.addAttribute("tags", tagService.getTags());
         model.addAttribute("blog", blogServce.getBlog(id));
         return "admin/blog_input";
     }

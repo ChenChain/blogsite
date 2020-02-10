@@ -34,7 +34,7 @@
 
     <select id="blogs" resultType="com.chain.blog.cond.BlogCond">
         select blog.id as blogId, blog.title as blogTitle, type.name as typeName ,blog.recommend as
-        isCommend,blog.updateTime as updateTime ,blog.published as isPublished from blog,type
+        isCommend,   blog.updateTime as updateTime ,blog.published as isPublished from blog,type
         <where>
             blog.typeId=type.id
             <if test="search1!=null">
@@ -66,7 +66,8 @@
         appreciation=#{blog.appreciation},
         sharestatement=#{blog.sharestatement},commentabled=#{blog.commentabled},
         published=#{blog.published},recommend=#{blog.recommend},
-        createTime=#{blog.createTime},updateTime=#{blog.updateTime} ,userId=#{blog.userId}, typeId=#{blog.typeId},description=#{description}
+    updateTime=#{blog.updateTime} ,userId=#{blog.userId}, typeId=#{blog.typeId} ,
+        description=#{blog.description}
         where  id=#{blog.id}
     </update>
 

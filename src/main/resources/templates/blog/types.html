@@ -4,60 +4,68 @@
 </head>
 <th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
 <link href="/js/pageAjax.css" rel="stylesheet">
+<link href="/css/footerbottom.css" rel="stylesheet">
+
 <script src="/js/pageAjax.js"></script>
+<style>
+    .m-type-padding{
+        padding: 5em;
+    }
+    .m-type-margin{
+        margin: 0.5em;
+    }
+
+    .m-blog-list{
+        height: 1500px;
+    }
+    @media (max-width: 768px) {
+        .m-blog-list{
+            height:1860px;
+        }
+
+    }
+</style>
 
 <body>
     <!-- 导航 -->
     <nav th:insert="/bootstraphtml/fragments::navigation(2)"></nav>
  <input type="hidden" th:value="${activeTypeId}" id="activeTypeId">
   <!-- 中间内容 -->
-  <div class="m-container-small m-padding-tb-big">
-  
-    <div class="ui container">
-      <!-- 分类头部 -->
-      <div class="ui top attached segment">
-        <div class="ui middle aligned two column grid">
-          <div class="column">
-              <div class="ui teal header">分类</div>
-          </div>
-          <div class="column right aligned">
-                共<h3 class="ui orange header m-inline-block" th:text="${#arrays.length(types)}">14</h3>个
-          </div>
+    <div class="container  " role="typesContainer" >
+        <div class="row">
+            <div class="col-xs-6  text-left"><h3>分类</h3></div>
+            <div class="col-xs-6 text-right"><h3>共<span th:text="${#arrays.length(types)}">10</span>个</h3></div>
         </div>
-    </div>
-    <div  class="ui attached segment ">
-      <div   th:each="typeIndex:${types}"   class="ui labeled  button m-margin-tb-tiny">
-        <a th:href="@{/alltypes/{typeid}(typeid=${typeIndex.id})}" class="ui basic  button"   th:classappend="${typeIndex.id==activeTypeId} ?'teal'"   th:text="${typeIndex.name}">思考</a>
-        <div class="ui basic  left pointing label"    th:classappend="${typeIndex.id==activeTypeId} ?'teal'"  th:text="${#arrays.length(typeIndex.getBlogList())}">
-          24
+        <hr style="  color: #987cb9" width="100%" class="bg-info" size=1>
+        <div class="container ">
+            <a class="btn btn-primary m-type-margin"  th:each="typeIndex:${types}"  th:href="@{/alltypes/{typeid}(typeid=${typeIndex.id})}"
+               th:classappend="${typeIndex.id==activeTypeId} ?'active'"  >
+                <span th:text="${typeIndex.name}">  Messages</span>&nbsp;
+               <span class="badge" th:text="${#arrays.length(typeIndex.getBlogList())}">4</span>
+            </a>
         </div>
-      </div>
+        <hr style=" color: #987cb9" width="100%" class="bg-info" size=1>
     </div>
 
-    <div class="ui top attached teal segment"  id="blogList">
 
 
-    </div>
-
-<!--        分页-->
-    <div class="ui bottom attached segment">
-      <div class="ui top attached segment">
-
+    <div class="container">
         <div id="page"></div>
-      </div>
-  </div>
-  
-  </div>
+    </div>
 
-  </div>
+    <div class="container m-blog-list"  id="blogList" >
+
+
+    </div>
+
+
   <!-- 底部 -->
-    <footer th:insert="/bootstraphtml/fragments::footer"></footer>
+    <footer style="position: relative" th:insert="/bootstraphtml/fragments::footer"></footer>
+    <th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+
 </body>
 
   <script>
- $(".m-control-show").click(function(){
-     $('.m-item').toggleClass('m-mobile-hide');
- });
 
 
  //分页
@@ -77,6 +85,8 @@
              listObj=data.list;
              $("#blogList").empty();
              $("#blogList").append( drawBlogs(listObj));
+             //渲染之后加载footer
+
          }
      }
  );
@@ -87,40 +97,41 @@
      html="";
      for (var i = 0; i <datas.length ; i++) {
          var data=datas[i];
+         var blogUrl="/blog/"+data.blogId;
+         var blogA='<a href="' + blogUrl +'">'+ data.blogTitle+'</a>';
          html+=
-             '<div class="ui padded  vertical segment">'+
-             '<div class="ui grid "><div class="eleven wide column ">'+
-             '<h3 class="ui header" id="blogTitle">'+ data.blogTitle +'</h3>'+
+     '<div class="panel panel-default" role="blogPanel"> <div class="panel-heading">'+
+            ' <h3 class="panel-title">'+
+             blogA
+             +'</h3>' +
+        ' </div> ' +
+         ' <div class="panel-body  bg-warning"> '+
+            ' <div class="row" style="height: 10em;"> '+
+             '<div class="col-xs-8 " style="height: 141px;">'+
+             '<textarea name="description" readonly id="" cols="30" rows="3" style="width: 100%;  height: 100%; resize: none; border: none; overflow: auto; ">'+  data.description+'</textarea>'+
+            ' </div>'+
+             '<div class="col-xs-4" style="height: 141px;">'+
+             '<img src=" ' +  data.firstPicture    +  ' " class="img-responsive" style="height: 100%;" > '+
+            ' </div>'+
+             '</div>'+
+             '</div>'+
+             '<div class="panel-footer">'+
+             '<div class="row ">'+
+             '<div class="col-xs-12">'+
+             '<span class="glyphicon glyphicon-calendar"> &nbsp;' +  data.updateTime + '</span>&nbsp;'+
+             '<span class="glyphicon glyphicon-tag" >&nbsp;'+ data.typeName  +'</span>'+
+             '</div>'+
+             '</div>'+
+             '</div>'+
+             '</div>' ;
 
-             '<div class="ui segment" ><div style="width: auto; height: 400;"> <textArea readonly class="comments" rows=5  cols=27   onpropertychange= "this.style.posHeight=this.scrollHeight">'+
-             data.description+
-             '</textArea> </div> </div>'+
-
-             '<div class="ui grid">'+
-             '<div class="eleven wide column">'+
-             '<div class=" ui horizontal link list">'+
-             '<div class="item">'+
-             '<i class="calendar icon"></i>'+data.updateTime+
-             '<i class="item eye icon"></i>'+data.viewed+
-             '<a class="ui teal basic label m-padded-mini">'+data.typeName+'</a>'+
-             '</div>'+
-             '</div>'+
-             '</div>'+
-             '</div>'+
-             '</div>'+
-
-             '<div class="five wide column">'+
-
-             '<div class="ui segment " style="width: 100%; height: 100%;">'+
-             '<img id="firstPic"  src="'+ data.firstPicture+ '"style="width: 100%; height: 100%;">'+
-             '</div>'+
-             '</div>'+
-             '</div>'+
-             '</div>'
      }
      return html;
  }
 
-</script>  
 
+</script>
+<script>
+    $("#recommendBlog_container").load("/footer");
+</script>
 </html>

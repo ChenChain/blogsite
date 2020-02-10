@@ -19,7 +19,7 @@ public interface BlogServce {
     int updateBlog(int id,Blog blog);
 
     int  deleteBlog(int id);
-    List<Blog> listBlogTop(Integer size);
+    List<BlogCond> listBlogTop(Integer size);
 
     List<BlogIndexCond> indexBlog(int page,  int size,  String search1, String s2);
 

@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,7 +40,6 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model){
         blogViewDao.addOnce();
-        model.addAttribute("recommendBlogs",blogServce.listBlogTop(3));
         return "/blog/index";
     }
 
@@ -84,5 +84,18 @@ public class IndexController {
         return "/blog/blog";
     }
 
+
+    /**
+     * 针对footer下的推荐博客
+     */
+    @GetMapping("/footer")
+    public String footerInit(Model model){
+        List<BlogCond> blogConds=new ArrayList<>();
+        blogConds=blogServce.listBlogTop(3);
+        model.addAttribute("recommendBlog",blogConds);
+//        System.out.println("footer已经加载");
+//        System.out.println(blogConds);
+        return "/bootstraphtml/fragments::recommendBlog";
+    }
 
 }

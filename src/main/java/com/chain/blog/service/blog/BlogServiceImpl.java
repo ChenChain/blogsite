@@ -46,7 +46,7 @@ public class BlogServiceImpl implements  BlogServce {
     }
 
     @Override
-    public List<Blog> listBlogTop(Integer size) {
+    public List<BlogCond> listBlogTop(Integer size) {
         return blogDao.listBlogTop(size);
     }
 

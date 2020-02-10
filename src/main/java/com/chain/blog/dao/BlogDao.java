@@ -22,7 +22,7 @@ public interface BlogDao {
     int deleteBlog(int id);
 
     //获得最新推荐处的blog
-    List<Blog> listBlogTop(Integer size);
+    List<BlogCond> listBlogTop(Integer size);
 
     //获得首页处的blogIndexCond
     List<BlogIndexCond> indexBlog(@Param("page") int page, @Param("size") int size, @Param("search1") String search1, @Param("s2") String s2);

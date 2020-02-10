@@ -4,21 +4,24 @@
 </head>
 <th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
 <link href="/js/pageAjax.css" rel="stylesheet">
+<link href="/css/footerbottom.css" rel="stylesheet">
+
 <script src="/js/pageAjax.js"></script>
 
 <!-- 控制宽度的自动适应 -->
 
 <style type="text/css">
-    .comments {
-        width:100%;/*自动适应父布局宽度*/
-        border: none;
-        resize: none;
-        overflow:auto;
-        word-break:break-all;
 
-        /*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时，
-        当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/
+    .m-blog-list{
+        height: 1500px;
     }
+    @media (max-width: 768px) {
+        .m-blog-list{
+            height:1760px;
+        }
+
+    }
+
     a:hover{
         cursor: pointer;
     }
@@ -28,74 +31,35 @@
     <!-- 导航 -->
     <nav th:insert="/bootstraphtml/fragments::navigation(1)"></nav>
   <!-- 中间内容 -->
-  <div class="m-padding-tb-large">
-      <!-- container使页面对于不同尺寸有较好的适配 -->
-      <div class="ui container">
-    <div class="ui stackable grid">
-         <!-- 左边十一份    -->
-        <div class="eleven wide column">
-            <!-- 头部 -->
-            <div class="ui top attached segment">
 
-                <div class="ui middle aligned two column grid">
-                  <div class="column">
-                      <div class="ui teal header">博客</div>
-                  </div>
-                  <div class="column right aligned">
-                        共<h3 class="ui orange header m-inline-block" id="blog_num">14</h3>篇
-                  </div>
-                </div>
-            </div>
-            <!-- blog列表 -->
-            <div class="ui attached segment" id="blogList">
 
-            </div>
 
-            <!--            底部分页-->
-        <div id="page"></div>
+
+    <div class="container  " role="indexContainer" >
+        <div class="row">
+            <div class="col-xs-6  text-left"><h3>博客</h3></div>
+            <div class="col-xs-6 text-right"><h3>共<span  id="blog_num"> 10</span>篇</h3></div>
         </div>
-        <!-- 右边部分 -->
-        <div class="five wide column">
-            <div class="ui segments">
-                <div class="ui secondary  segment">
-                    <div class="ui grid">
-                        <div class="ten wide column">
-                           <i class="idea icon"></i>心情
-                        </div>
-                        <div class="six wide column right aligned">
-                            <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 分类 -->
-                <div class="ui teal segment">
-                    <div class="ui fluid vertical menu">
-                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">心情日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
-                        <a href="#" class="item">学习日志<div class="ui teal basic left pointing label">13</div></a>
-                        
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
+        <hr style=" color: #987cb9" width="100%" class="bg-info" size=1>
     </div>
-</div>
-
-  </div>
 
 
+
+    <div class="container">
+        <div id="page"></div>
+    </div>
+
+    <div class="container m-blog-list"  id="blogList" >
+
+
+    </div>
 
 
 
   <!-- 底部 -->
-    <footer th:insert="/bootstraphtml/fragments::footer"></footer>
+    <footer style="position: relative" th:insert="/bootstraphtml/fragments::footer"></footer>
 
+<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
 <script>
@@ -116,7 +80,7 @@
             nowPage: 1,
             canJump: 1,
             showOne: 0,
-            pageSize: 3,
+            pageSize: 5,
             callback:function (data) {
                 //data 即为ajax传递过来的查询数据
                 //渲染
@@ -139,44 +103,39 @@
             var blogUrl="/blog/"+data.blogId;
             var blogA='<a href="' + blogUrl +'">'+ data.blogTitle+'</a>';
             html+=
-                '<div class="ui padded  vertical segment">'+
-        '<div class="ui grid "><div class="eleven wide column ">'+
-
-
-                '<h3 class="ui header">'+
-
-                    blogA
-
-                +'</h3>'+
-
-                '<div class="ui segment" ><div style="width: auto; height: 400;"> <textArea readonly class="comments" rows=5  cols=27   onpropertychange= "this.style.posHeight=this.scrollHeight">'+
-                data.description+
-                '</textArea> </div> </div>'+
-
-                '<div class="ui grid">'+
-                '<div class="eleven wide column">'+
-            '<div class=" ui horizontal link list">'+
-                '<div class="item">'+
-                '<i class="calendar icon"></i>'+data.updateTime+
-                '<i class="item eye icon"></i>'+data.viewed+
-                '<a class="ui teal basic label m-padded-mini">'+data.typeName+'</a>'+
+                '<div class="panel panel-default" role="blogPanel"> <div class="panel-heading">'+
+                ' <h3 class="panel-title">'+
+                blogA
+                +'</h3>' +
+                ' </div> ' +
+                ' <div class="panel-body  bg-warning"> '+
+                ' <div class="row" style="height: 10em;"> '+
+                '<div class="col-xs-8 " style="height: 141px;">'+
+                '<textarea name="description" readonly id="" cols="30" rows="3" style="width: 100%;  height: 100%; resize: none; border: none; overflow: auto; ">'+  data.description+'</textarea>'+
+                ' </div>'+
+                '<div class="col-xs-4" style="height: 141px;">'+
+                '<img src=" ' +  data.firstPicture    +  ' " class="img-responsive" style="height: 100%;" > '+
+                ' </div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="panel-footer">'+
+                '<div class="row ">'+
+                '<div class="col-xs-12">'+
+                '<span class="glyphicon glyphicon-calendar"> &nbsp;' +  data.updateTime + '</span>&nbsp;'+
+                '<span class="glyphicon glyphicon-tag" >&nbsp;'+ data.typeName  +'</span>'+
                 '</div>'+
                 '</div>'+
                 '</div>'+
-                '</div>'+
-                '</div>'+
+                '</div>' ;
 
-                '<div class="five wide column">'+
-
-                '<div class="ui segment " style="width: 100%; height: 100%;">'+
-                '<img  src="'+ data.firstPicture+ '" style="width: 100%; height: 100%;">'+
-                '</div>'+
-                '</div>'+
-                '</div>'+
-                '</div>'
         }
         return html;
     }
+
+</script>
+
+<script>
+    $("#recommendBlog_container").load("/footer");
 </script>
 
 </html>

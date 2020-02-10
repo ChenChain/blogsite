@@ -2,54 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71772e51-a0a0-4823-92a1-28e5ac869472" name="Default Changelist" comment="完成基本功能 重写了部分前端页面">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_0_14_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_ext_gfm_tables_0_14_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_ext_heading_anchor_0_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/achieve.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_bitwalker_UserAgentUtils_1_20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9113d93e-5ee2-443d-b997-73174085e10e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9113d93e-5ee2-443d-b997-73174085e10e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/cond/BlogCond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/cond/BlogCond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/LogAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/BlogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/TypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/TypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Blog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/type/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/type/TypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/type/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/type/TypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/z.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/ThymeleafTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/ThymeleafTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/BlogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/pageAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/pageAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lib/qrcode/qrcode.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/achieves.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/achieve.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blog_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blog_input.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/tags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/types.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/zz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/achieve.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/achieve.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect$RequestLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect$RequestLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/dao/BlogDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/dao/BlogDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Blog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Comment.class" afterDir="false" />
@@ -62,9 +44,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/BlogController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/me.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/pageAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/pageAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/lib/qrcode/qrcode.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/achieves.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blog_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blog_input.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/fragments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/about.html" beforeDir="false" />
@@ -123,6 +107,13 @@
         <item name="chain@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="chain: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="chain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="chain: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -131,8 +122,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Aspect" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -207,7 +199,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BlogApplication">
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="AddressUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chain.blog.utils.AddressUtil" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chain.blog.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddressUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chain.blog.utils.AddressUtils" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chain.blog.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BlogApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.chain.blog.BlogApplication" />
       <module name="blog" />
@@ -221,38 +239,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.chain.blog.utils.DateUtil" />
+    <configuration name="NickNameUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chain.blog.utils.NickNameUtil" />
       <module name="blog" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.chain.blog.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.chain.blog.utils.MD5Util" />
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chain.blog.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypeServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.chain.blog.service.type.TypeServiceImpl" />
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chain.blog.service.type.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,11 +277,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BlogApplication" />
+        <item itemvalue="Application.AddressUtil" />
+        <item itemvalue="Application.AddressUtils" />
         <item itemvalue="JUnit.BlogApplicationTests.contextLoads" />
-        <item itemvalue="Application.DateUtil" />
-        <item itemvalue="Application.TypeServiceImpl" />
-        <item itemvalue="Application.MD5Util" />
+        <item itemvalue="Application.BlogApplication" />
+        <item itemvalue="Application.NickNameUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -350,8 +342,25 @@
       <workItem from="1580643777871" duration="2916000" />
       <workItem from="1580697401481" duration="18834000" />
       <workItem from="1580783796497" duration="33579000" />
-      <workItem from="1580875771401" duration="8319000" />
+      <workItem from="1580875771401" duration="27141000" />
+      <workItem from="1580911084649" duration="21000" />
+      <workItem from="1580959617065" duration="8246000" />
+      <workItem from="1580969336401" duration="2733000" />
+      <workItem from="1580983009548" duration="6804000" />
+      <workItem from="1581056718415" duration="7226000" />
+      <workItem from="1581083843847" duration="2672000" />
+      <workItem from="1581134138220" duration="16277000" />
+      <workItem from="1581216894190" duration="19782000" />
+      <workItem from="1581307792301" duration="3647000" />
     </task>
+    <task id="LOCAL-00001" summary="完成基本功能 重写了部分前端页面">
+      <created>1580885229611</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580885229611</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,15 +418,31 @@
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java</url>
+          <line>34</line>
+          <properties class="com.chain.blog.BlogApplicationTests" method="contextLoads">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chain/blog/utils/AddressUtil.java</url>
+          <line>200</line>
+          <properties class="com.chain.blog.utils.AddressUtil" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/chain/blog/service/comment/CommentServiceImpl.java</url>
           <line>158</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/BlogController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

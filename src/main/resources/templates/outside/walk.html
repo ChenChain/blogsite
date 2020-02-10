@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="/bootstraphtml/fragments::head('足迹')"></head>
+<body>
+<link href="/css/footerbottom.css" rel="stylesheet">
+
+
+<nav th:insert="/bootstraphtml/fragments::navigation(5)"></nav>
+<!-- 中间内容 -->
+
+
+
+
+
+<div class="container">
+    <div class="jumbotron" style="background-color: black;">
+        <div class="hidden" id="tip">未完待续<br/>...</div>
+        <div class="text-center" id="tipshow" style="font-size: large; color: white;" ></div>
+
+</div>
+</div>
+
+
+
+
+
+
+<footer th:insert="/bootstraphtml/fragments::footer"></footer>
+<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+
+
+
+</body>
+<script>
+
+</script>
+<script>
+    $("#recommendBlog_container").load("/footer");
+    $.wink("#tip","#tipshow",false);
+</script>
+</html>
