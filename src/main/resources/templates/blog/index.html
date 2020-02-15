@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:insert="/bootstraphtml/fragments::head('首页')"></head>
+<head th:insert="bootstraphtml/fragments::head('首页')"></head>
 </head>
-<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
-<link href="/js/pageAjax.css" rel="stylesheet">
-<link href="/css/footerbottom.css" rel="stylesheet">
-
-<script src="/js/pageAjax.js"></script>
+<th:block th:insert="bootstraphtml/fragments::semen-js"></th:block>
 
 <!-- 控制宽度的自动适应 -->
-
 <style type="text/css">
 
     .m-blog-list{
@@ -28,8 +23,10 @@
 </style>
 
 <body>
+<link href="/js/pageAjax.css"  rel="stylesheet" th:href="@{/js/pageAjax.css}">
+<link href="/css/footerbottom.css" th:href="@{/css/footerbottom.css}" rel="stylesheet">
     <!-- 导航 -->
-    <nav th:insert="/bootstraphtml/fragments::navigation(1)"></nav>
+    <nav th:insert="bootstraphtml/fragments::navigation(1)"></nav>
   <!-- 中间内容 -->
 
 
@@ -57,11 +54,13 @@
 
 
   <!-- 底部 -->
-    <footer style="position: relative" th:insert="/bootstraphtml/fragments::footer"></footer>
+    <footer style="position: relative" th:insert="bootstraphtml/fragments::footer"></footer>
 
-<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+<th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
+<script src="/js/pageAjax.js" th:src="@{/js/pageAjax.js}"></script>
+
 <script>
 
 
@@ -133,7 +132,6 @@
     }
 
 </script>
-
 <script>
     $("#recommendBlog_container").load("/footer");
 </script>

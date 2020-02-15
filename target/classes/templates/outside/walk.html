@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 
-<head th:insert="/bootstraphtml/fragments::head('足迹')"></head>
+<head th:insert="bootstraphtml/fragments::head('足迹')"></head>
 <body>
-<link href="/css/footerbottom.css" rel="stylesheet">
+<link href="/css/footerbottom.css" th:href="@{/css/footerbottom.css}" rel="stylesheet">
 
 
-<nav th:insert="/bootstraphtml/fragments::navigation(5)"></nav>
+<nav th:insert="bootstraphtml/fragments::navigation(5)"></nav>
 <!-- 中间内容 -->
 
 
@@ -26,8 +26,8 @@
 
 
 
-<footer th:insert="/bootstraphtml/fragments::footer"></footer>
-<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+<footer th:insert="bootstraphtml/fragments::footer"></footer>
+<th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 
 

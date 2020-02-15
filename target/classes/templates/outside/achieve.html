@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 
-<head th:insert="/bootstraphtml/fragments::head('归档')"></head>
+<head th:insert="bootstraphtml/fragments::head('归档')"></head>
 <body>
-<link href="/css/footerbottom.css" rel="stylesheet">
+<link href="/css/footerbottom.css" rel="stylesheet" th:href="@{/css/footerbottom.css}">
 
-<nav th:insert="/bootstraphtml/fragments::navigation(4)"></nav>
+<nav th:insert="bootstraphtml/fragments::navigation(4)"></nav>
 <!-- 中间内容 -->
 <div class="container">
     <div th:each="year: ${years}">
@@ -37,10 +37,10 @@
 
 
 
-<footer th:insert="/bootstraphtml/fragments::footer"></footer>
+<footer th:insert="bootstraphtml/fragments::footer"></footer>
 
 
-<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+<th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
 <script>

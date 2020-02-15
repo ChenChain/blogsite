@@ -12,6 +12,6 @@ public class WalkController {
 
     @GetMapping("/walk")
     public String walk(){
-        return "/outside/walk";
+        return "outside/walk";
     }
 }

@@ -1,69 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="blog:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="71772e51-a0a0-4823-92a1-28e5ac869472" name="Default Changelist" comment="完成基本功能 重写了部分前端页面">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_0_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_ext_gfm_tables_0_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_ext_heading_anchor_0_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_bitwalker_UserAgentUtils_1_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9113d93e-5ee2-443d-b997-73174085e10e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9113d93e-5ee2-443d-b997-73174085e10e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/blog_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/blog_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/blog_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/tag_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/tag_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/type_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/type_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/blog_Web_exploded/WEB-INF/classes/templates/admin/types.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/dao/BlogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/service/blog/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/ActIPAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/aspect/ActIPAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/utils/NickNameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/utils/NickNameUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/admin/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/AboutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/AboutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/AchieveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/AchieveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/SomethingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/SomethingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/WalkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chain/blog/web/blog/WalkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogViewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogViewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blog_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blog_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/tag_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/tag_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/type_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/type_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/types.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bootstraphtml/btframents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bootstraphtml/btframents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bootstraphtml/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bootstraphtml/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/achieve.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/achieve.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/something.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/something.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outside/walk.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outside/walk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/blog.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect$RequestLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect$RequestLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/LogAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/dao/BlogDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/dao/BlogDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/entity/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/service/blog/BlogServce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/service/blog/BlogServce.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/service/blog/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/service/blog/BlogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/service/type/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/service/type/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/ThymeleafTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/ThymeleafTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/ActIPAspect$IPInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/ActIPAspect$IPInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/ActIPAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/aspect/ActIPAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/utils/NickNameUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/utils/NickNameUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/pageAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/pageAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/lib/qrcode/qrcode.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/achieves.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/admin/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/AboutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/AboutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/AchieveController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/AchieveController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/SomethingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/SomethingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/WalkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chain/blog/web/blog/WalkController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogViewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BlogViewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blog_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blog_input.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/achieve.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/tag_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/tag_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/type_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/type_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/types.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/blog/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog/types.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/bootstraphtml/btframents.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/bootstraphtml/btframents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/bootstraphtml/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/bootstraphtml/fragments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/test1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/test2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/zz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/outside/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/outside/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/outside/achieve.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/outside/achieve.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/outside/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/outside/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/outside/something.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/outside/something.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/outside/walk.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/outside/walk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/chain/blog/BlogApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/chain/blog/BlogApplicationTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,7 +184,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -352,6 +376,12 @@
       <workItem from="1581134138220" duration="16277000" />
       <workItem from="1581216894190" duration="19782000" />
       <workItem from="1581307792301" duration="3647000" />
+      <workItem from="1581315050099" duration="6221000" />
+      <workItem from="1581326707361" duration="51000" />
+      <workItem from="1581327265554" duration="12180000" />
+      <workItem from="1581389362568" duration="1349000" />
+      <workItem from="1581390781319" duration="8635000" />
+      <workItem from="1581486224400" duration="1051000" />
     </task>
     <task id="LOCAL-00001" summary="完成基本功能 重写了部分前端页面">
       <created>1580885229611</created>
@@ -417,14 +447,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/chain/blog/BlogApplicationTests.java</url>
-          <line>34</line>
-          <properties class="com.chain.blog.BlogApplicationTests" method="contextLoads">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/chain/blog/utils/AddressUtil.java</url>

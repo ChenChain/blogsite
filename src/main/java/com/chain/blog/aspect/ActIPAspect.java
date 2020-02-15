@@ -3,9 +3,9 @@ package com.chain.blog.aspect;
 import com.chain.blog.dao.VisitorDao;
 import com.chain.blog.entity.Comment;
 import com.chain.blog.entity.Something;
-import com.chain.blog.utils.AddressUtil;
+
 import com.chain.blog.utils.IPUtil;
-import com.chain.blog.utils.NickNameUtil;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +21,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 /**

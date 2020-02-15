@@ -2,8 +2,9 @@
 <html  xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head(htmltitle)">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title th:text="${htmltitle}">归档</title>
-    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/jquery-3.4.1.js" th:href="@{/js/jquery-3.4.1.js}"></script>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
@@ -61,7 +62,7 @@
 
         </div>
         <div class="divforform">
-            <form class="navbar-form navbar-right" role="search" name="search"  action="/search" target="_blank" method="post">
+            <form class="navbar-form navbar-right" role="search" name="search" th:action="@{/search}"  action="/search" target="_blank" method="post">
                 <div class="input-group"  style="color: rgb(0, 0, 0) !important">
                     <input type="text" name="query" class="form-control fc-clear"  placeholder="Search">
                     <span class="input-group-addon"  style="border: 0;" >
@@ -79,7 +80,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-    <script src="/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+<!--    <script src="/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>-->
 </th:block>
 
 
@@ -121,11 +122,11 @@
 
 
             <div class="col-sm-3 text-center" >
-                <h4 class="m-nav-head-font-color">最新博客</h4>
+                <h4 class="m-nav-head-font-color">联系我</h4>
                 <div class="m-nav-text-font-color">
-                    <div class="row m-nav-hover-changecolor ">博客1</div>
-                    <div class="row m-nav-hover-changecolor">博客3</div>
-                    <div class="row  m-nav-hover-changecolor">博客4</div>
+                    <div class="row m-nav-hover-changecolor ">chainchen01@gmail.com</div>
+<!--                    <div class="row m-nav-hover-changecolor">博客3</div>-->
+<!--                    <div class="row  m-nav-hover-changecolor">博客4</div>-->
                 </div>
 
 
@@ -136,7 +137,7 @@
                 </div>
                 <div class="row">
                     <br/>
-                    <div id="content" class="hidden">To be continued...</div>
+                    <div id="footer-content" class="hidden">To be continued...</div>
                     <p class="m-nav-tobecontinued " style="width: 100%;" id="show"></p>
                 </div>
             </div>
@@ -153,7 +154,7 @@
     <script src="/js/wink.js"></script>
     <script>
         $.wink("#word","#wordshow",false);
-        $.wink("#content","#show",true);
+        $.wink("#footer-content","#show",true);
     </script>
 </th:block>
 

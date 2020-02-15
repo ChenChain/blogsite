@@ -4,7 +4,7 @@
 
 
 <update id="addOnce">
-    update blogView set viewed=viewed+1
+    update blogview set viewed=viewed+1
 </update>
 
 </mapper>

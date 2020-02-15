@@ -19,8 +19,8 @@
 <!-- 二级导航 -->
   <div class="ui attached pointing menu">
     <div class="ui container">    
-      <a href="/admin/blogs/input" class="item">发布</a>
-      <a href="/admin/blogs" class="item">列表</a>
+      <a href="/admin/blogs/input" th:href="@{/admin/blogs/input}" class="item">发布</a>
+      <a href="/admin/blogs" th:href="@{/admin/blogs}" class="item">列表</a>
     </div>
 
   </div>
@@ -44,11 +44,9 @@
 
 
 
-  <!-- 底部 -->
-<footer th:insert="admin/fragments::footer"></footer>
+
 </body>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"></script> -->
   <script>
  $(".m-control-show").click(function(){
      $('.m-item').toggleClass('m-mobile-hide');

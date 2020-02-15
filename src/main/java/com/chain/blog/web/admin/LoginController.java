@@ -38,7 +38,6 @@ public class LoginController {
         if(user!=null){
             user.setPassword(null);//不把密码传递到前台
             session.setAttribute("user",user);//96e79218965eb72c92a549dd5a330112
-
             return "admin/index";
         }
         else {
@@ -55,6 +54,6 @@ public class LoginController {
 
     @GetMapping("/index")
     public String index(){
-        return "/admin/index";
+        return "admin/index";
     }
 }

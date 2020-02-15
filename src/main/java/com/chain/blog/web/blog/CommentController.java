@@ -35,7 +35,7 @@ public class CommentController {
     @GetMapping("/comments/{blogId}")
     public String comments(@PathVariable("blogId") int id, Model model){
         model.addAttribute("comments",commentService.listCommentByBlogId(id));
-        return "/blog/blog::commentList";
+        return "blog/blog::commentList";
     }
 
     @PostMapping("/comments")

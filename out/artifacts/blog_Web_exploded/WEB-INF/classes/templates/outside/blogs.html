@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragment :: head('博客')">
+</head>
+<link href="/css/footerbottom.css" rel="stylesheet">
+
+<body>
+<!-- 导航 -->
+<nav th:insert="/bootstraphtml/btframents::navigation(1)"></nav>
+<!-- 中间内容 -->
+
+
+
+<!-- 底部 -->
+
+<footer th:insert="/bootstraphtml/btframents::footer"></footer>
+<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+
+</body>
+
+<script>
+
+
+
+
+</script>
+<script>
+    $("#recommendBlog_container").load("/footer");
+</script>
+</html>

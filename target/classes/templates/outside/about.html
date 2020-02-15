@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/bootstraphtml/fragments::head('关于')"></head>
+<head th:insert="bootstraphtml/fragments::head('关于')"></head>
 </head>
-<link href="/css/footerbottom.css" rel="stylesheet">
+<link href="/css/footerbottom.css" th:href="@{/css/footerbottom.css}" rel="stylesheet">
 
 <body>
     <!-- 导航 -->
-    <nav th:insert="/bootstraphtml/fragments::navigation(7)"></nav>
+    <nav th:insert="bootstraphtml/fragments::navigation(7)"></nav>
   <!-- 中间内容 -->
 
     <div class="container">
@@ -19,8 +19,8 @@
     </div>
 
 
-    <footer th:insert="/bootstraphtml/fragments::footer"></footer>
-    <th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+    <footer th:insert="bootstraphtml/fragments::footer"></footer>
+    <th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chain.blog.dao.SomethingDao">
+    <select id="queryById" resultType="com.chain.blog.entity.Something">
+        select * from something where  id=#{id}
+    </select>
+    <select id="queryByPage" resultType="com.chain.blog.entity.Something">
+        select * from  something order by something.createTime desc
+    </select>
+    <insert id="save">
+        insert into something  (name,content,ip,createTime) values (#{name},#{content},#{ip},#{createTime})
+    </insert>
+
+    <select id="getCount" resultType="Integer">
+        select count(*) from  something
+    </select>
+
+</mapper>

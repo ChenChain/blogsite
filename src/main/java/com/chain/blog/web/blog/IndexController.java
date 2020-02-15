@@ -40,7 +40,7 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model){
         blogViewDao.addOnce();
-        return "/blog/index";
+        return "blog/index";
     }
 
 
@@ -62,7 +62,7 @@ public class IndexController {
     @PostMapping("/search")
     public String search(@RequestParam String query, Model model){
         model.addAttribute("query",query);
-        return "/blog/search";
+        return "blog/search";
     }
 
     //search 全局搜索返回的博客数据 依据 query值 匹配 title / content / type 并按照时间降序
@@ -81,7 +81,7 @@ public class IndexController {
     public String blog(@PathVariable("id") int id ,Model model){
         blogServce.addOnce(id);
         model.addAttribute("blog",blogServce.htmlIndexBlog(id));
-        return "/blog/blog";
+        return "blog/blog";
     }
 
 
@@ -95,7 +95,7 @@ public class IndexController {
         model.addAttribute("recommendBlog",blogConds);
 //        System.out.println("footer已经加载");
 //        System.out.println(blogConds);
-        return "/bootstraphtml/fragments::recommendBlog";
+        return "bootstraphtml/fragments::recommendBlog";
     }
 
 }

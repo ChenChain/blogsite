@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(htmltitle)">
+    <meta charset="utf-8">
+    <title th:text="${htmltitle}">归档</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .m-nav-text-font-color{
+            color :#CCCCCC;
+        }
+        .m-nav-head-font-color{
+            color:snow;
+        }
+        .m-nav-img-margin{
+            margin-top: 1em;
+        }
+        .m-nav-hover-changecolor:hover{
+            color:#FFFFFF;
+        }
+        .m-nav-tobecontinued{
+            color: snow;
+        }
+        p{
+            margin: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<nav   th:fragment="navigation(n)" class="navbar navbar-expand-sm bg-dark navbar-dark ">
+    <a class="navbar-brand" href="#">Chain's Blog</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a   th:classappend="${n==1}?'active'"  class="nav-link" href="#">首页</a>
+            </li>
+            <li class="nav-item">
+                <a  th:classappend="${n==2}?'active'" class="nav-link" href="#">分类</a>
+            </li>
+            <li class="nav-item">
+                <a  th:classappend="${n==3}?'active'" class="nav-link" href="#">归档</a>
+            </li>
+            <li class="nav-item">
+                <a  th:classappend="${n==4}?'active'" class="nav-link" href="#">杂记</a>
+            </li>
+            <li class="nav-item">
+                <a  th:classappend="${n==5}?'active'" class="nav-link" href="#">足迹</a>
+            </li>
+            <li class="nav-item">
+                <a  th:classappend="${n==6}?'active'" class="nav-link" href="#">关于</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- search -->
+    <form class="form-inline">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <i  class=" glyphicon glyphicon-search  input-icon input-icon-md"  onclick="document.forms['search'].submit()"></i>
+            </div>
+        </div>
+    </form>
+</nav>
+
+
+
+<footer th:fragment="footer" >
+    <div role="footer-nav" class="bg-dark">
+        <div class="container-fluid">
+            <div role="footer-recommend" class="row" style="margin-top: 2em;">
+                <div class="col-sm-3 text-center">
+                    <img class="m-nav-img-margin "   style="width: 8em;"  src="/images/testgray.jpg" alt=""  >
+                </div>
+                <div class="col-sm-3 text-center">
+                    <h4 class="m-nav-head-font-color ">最新推荐</h4>
+                    <div class="m-nav-text-font-color ">
+                        <p class="m-nav-hover-changecolor ">推荐2</p>
+                        <p class=" m-nav-hover-changecolor m-nav-p-margin">推荐3</p>
+                        <p class="m-nav-hover-changecolor">推荐4</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <h4 class="m-nav-head-font-color ">最新博客</h4>
+                    <div class="m-nav-text-font-color ">
+                        <p class="m-nav-hover-changecolor ">推荐sdasdsa2</p>
+                        <p class=" m-nav-hover-changecolor">推荐3</p>
+                        <p class="m-nav-hover-changecolor">推荐4</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <div >
+                        <a  href="#"><h4 class="m-nav-head-font-color">Chain's Blog</h4></a>
+                    </div>
+                    <div >
+                        <br/>
+                        <p class="m-nav-tobecontinued">To be continued...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center" role="copyright">
+                <p class="m-auto">CopyRight</p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+<script>
+
+</script>
+</html>

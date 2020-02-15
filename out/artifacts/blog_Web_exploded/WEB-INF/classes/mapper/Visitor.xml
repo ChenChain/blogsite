@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chain.blog.dao.VisitorDao">
+
+<!--    void insertVisitorIndex(String ip,String brower,String visirTime,String location,String deviceInfo,String deviceName);-->
+<insert id="insertVisitorIndex">
+    insert  into vistorindex( ip, brower, visitTime, location, deviceInfo, deviceName)
+    values (#{ip},#{brower},#{visitTime},#{location},#{deviceInfo},#{deviceName})
+</insert>
+
+
+<!--    void insertVisitorSomething(String args,String ip, String brower, Date visitTime, String location, String deviceInfo, String deviceName);-->
+    <insert id="insertVisitorSomething">
+    insert  into vistorsomething( ip, brower, visitTime, location, deviceInfo, deviceName,args)
+    values (#{ip},#{brower},#{visitTime},#{location},#{deviceInfo},#{deviceName},#{args})
+</insert>
+
+    <insert id="insertVisitorComment">
+    insert  into vistorcomment( ip, brower, visitTime, location, deviceInfo, deviceName,args)
+    values (#{ip},#{brower},#{visitTime},#{location},#{deviceInfo},#{deviceName},#{args})
+</insert>
+
+
+</mapper>

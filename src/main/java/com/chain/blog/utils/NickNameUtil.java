@@ -1,7 +1,5 @@
 package com.chain.blog.utils;
 
-import com.sun.org.apache.regexp.internal.RE;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;

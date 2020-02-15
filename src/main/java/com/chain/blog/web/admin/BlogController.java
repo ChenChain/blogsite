@@ -55,7 +55,7 @@ public class BlogController {
 
     @GetMapping("/blogs")
     public String blogs() {
-
+        System.out.println("调用blogs函数");
         return "admin/blogs";
     }
 
@@ -119,6 +119,7 @@ public class BlogController {
         } else {
             attributes.addFlashAttribute("message", "新增成功");
         }
+//        return "redirect:/admin/blogs";
         return "redirect:/admin/blogs";
     }
 

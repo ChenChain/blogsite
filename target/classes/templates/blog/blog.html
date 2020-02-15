@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/bootstraphtml/fragments::head('博客')"></head>
+<head th:insert="bootstraphtml/fragments::head('博客')"></head>
 </head>
-<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
+<th:block th:insert="bootstraphtml/fragments::semen-js"></th:block>
 <body>
-<nav th:insert="/bootstraphtml/fragments::navigation(0)"></nav>
+<nav th:insert="bootstraphtml/fragments::navigation(0)"></nav>
   <!-- 中间内容 -->
   <div  class="m-container-small m-padding-tb-big">
     <div class="ui container">
@@ -158,11 +158,12 @@
 
   <!-- 底部 -->
 
-<footer th:insert="/bootstraphtml/fragments::footer"></footer>
-<th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+<footer th:insert="bootstraphtml/fragments::footer"></footer>
+<th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js" ></script>
+    <script src="/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 
   <script>
 

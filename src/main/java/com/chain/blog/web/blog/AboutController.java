@@ -12,6 +12,6 @@ public class AboutController {
 
     @GetMapping("/about")
     public String about(){
-        return "/outside/about";
+        return "outside/about";
     }
 }

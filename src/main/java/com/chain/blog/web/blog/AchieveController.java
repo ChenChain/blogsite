@@ -30,7 +30,7 @@ public class AchieveController {
     @GetMapping("/achieve")
     public String achieve(Model model){
         model.addAttribute("years",achieveService.findAllBlog());
-        return "/outside/achieve";
+        return "outside/achieve";
     }
 
 //    @GetMapping("/achieves")

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/bootstraphtml/fragments::head('搜索')"></head>
+<head th:insert="bootstraphtml/fragments::head('搜索')"></head>
 </head>
-<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
-<script src="js/pageAjax.js"></script>
-<link rel="stylesheet" href="js/pageAjax.css">
+<th:block th:insert="bootstraphtml/fragments::semen-js"></th:block>
+<script src="js/pageAjax.js" th:src="@{/js/pageAjax.js}"></script>
+<link rel="stylesheet" href="js/pageAjax.css" th:href="@{/js/pageAjax.css}">
 <style>
     .comments {
         width:100%;/*自动适应父布局宽度*/
@@ -18,7 +18,7 @@
 </style>
 <body>
 
-<nav th:insert="/bootstraphtml/fragments::navigation(0)"></nav>
+<nav th:insert="bootstraphtml/fragments::navigation(0)"></nav>
 
 <div class="m-container-small m-padding-tb-big">
 

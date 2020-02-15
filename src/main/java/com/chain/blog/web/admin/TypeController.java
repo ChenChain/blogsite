@@ -2,14 +2,11 @@ package com.chain.blog.web.admin;
 
 import com.chain.blog.entity.Type;
 import com.chain.blog.service.type.TypeService;
-import com.sun.deploy.net.HttpResponse;
-import com.sun.org.apache.xpath.internal.operations.Mod;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

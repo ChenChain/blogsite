@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head th:insert="/bootstraphtml/fragments::head('分类')"></head>
+<head th:insert="bootstraphtml/fragments::head('分类')"></head>
 </head>
-<th:block th:insert="/bootstraphtml/fragments::semen-js"></th:block>
-<link href="/js/pageAjax.css" rel="stylesheet">
-<link href="/css/footerbottom.css" rel="stylesheet">
-
-<script src="/js/pageAjax.js"></script>
+<th:block th:insert="bootstraphtml/fragments::semen-js"></th:block>
 <style>
     .m-type-padding{
         padding: 5em;
@@ -27,8 +23,11 @@
 </style>
 
 <body>
+<link href="/js/pageAjax.css" rel="stylesheet" th:href="@{/js/pageAjax.css}">
+<link href="/css/footerbottom.css" rel="stylesheet" th:href="@{/css/footerbottom.css}">
+
     <!-- 导航 -->
-    <nav th:insert="/bootstraphtml/fragments::navigation(2)"></nav>
+    <nav th:insert="bootstraphtml/fragments::navigation(2)"></nav>
  <input type="hidden" th:value="${activeTypeId}" id="activeTypeId">
   <!-- 中间内容 -->
     <div class="container  " role="typesContainer" >
@@ -60,14 +59,12 @@
 
 
   <!-- 底部 -->
-    <footer style="position: relative" th:insert="/bootstraphtml/fragments::footer"></footer>
-    <th:block th:insert="/bootstraphtml/fragments::winkfooter"></th:block>
+    <footer style="position: relative" th:insert="bootstraphtml/fragments::footer"></footer>
+    <th:block th:insert="bootstraphtml/fragments::winkfooter"></th:block>
 
 </body>
-
-  <script>
-
-
+<script src="/js/pageAjax.js" th:src="@{/js/pageAjax.js}"></script>
+<script>
  //分页
  //填充html
  var html="";

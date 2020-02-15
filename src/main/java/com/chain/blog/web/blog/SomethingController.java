@@ -28,7 +28,7 @@ public class SomethingController {
     @GetMapping("/something")
     public  String initSomething(Model model){
         model.addAttribute("something_count",somethingService.getCount());
-        return "/outside/something";
+        return "outside/something";
     }
 
     @GetMapping("/load")
@@ -36,7 +36,7 @@ public class SomethingController {
         List<Something> somethings=somethingService.queryByPage(1,8);
         model.addAttribute("somethings",somethings);
         model.addAttribute("currentPage",1);
-        return "/outside/something::something_list";
+        return "outside/something::something_list";
     }
 
     @GetMapping("/mobile_load")
@@ -44,7 +44,7 @@ public class SomethingController {
         List<Something> somethings=somethingService.queryByPage(1,1);
         model.addAttribute("somethings",somethings);
         model.addAttribute("currentPage",1);
-        return "/outside/something::something_list";
+        return "outside/something::something_list";
     }
 
 
@@ -61,7 +61,7 @@ public class SomethingController {
         List<Something> somethings=somethingService.queryByPage(page,8);
         model.addAttribute("somethings",somethings);
         model.addAttribute("currentPage",page);
-        return "/outside/something::something_list";
+        return "outside/something::something_list";
     }
 
 
@@ -72,7 +72,7 @@ public class SomethingController {
         List<Something> somethings=somethingService.queryByPage(page,1);
         model.addAttribute("somethings",somethings);
         model.addAttribute("currentPage",page);
-        return "/outside/something::something_list";
+        return "outside/something::something_list";
     }
 
 
