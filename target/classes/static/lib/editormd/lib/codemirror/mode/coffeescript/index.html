@@ -492,12 +492,12 @@ _.clone = (obj) ->
   _.extend {}, obj
 
 
-# Invokes com.chain.blog.interceptor with the obj, and then returns obj.
+# Invokes interceptor with the obj, and then returns obj.
 # The primary purpose of this method is to "tap into" a method chain,
 # in order to perform operations on intermediate results within
  the chain.
-_.tap = (obj, com.chain.blog.interceptor) ->
-  com.chain.blog.interceptor obj
+_.tap = (obj, interceptor) ->
+  interceptor obj
   obj
 
 

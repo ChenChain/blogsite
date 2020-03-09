@@ -1,15 +1,25 @@
+
+
 spring:
   datasource:
-    password: 123456
+    password: cc123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/chain?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&autoReconnect=true
+    url: jdbc:mysql://47.98.135.4:3306/chain?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&autoReconnect=true
     username: root
-mybatis:
-  mapper-locations:   #mapperλ��
-  type-aliases-package: #ʵ���
+
+
+
+
 logging:
   level:
     root: info #springboot������  Ĭ��info
-    com.chain.blog: debug
+    com.chain.blog: info
+#  file:
+#    path: log/blog.log #��־�ļ�λ��
 server:
-  port: 8081
+  port: 80
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.chain.blog.entity
+
+imgPath: file:/home/

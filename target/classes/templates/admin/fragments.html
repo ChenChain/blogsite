@@ -8,11 +8,7 @@
     <script src="./js/jquery-3.4.1.js" th:src="@{/js/jquery-3.4.1.js}"></script>
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js" ></script>
-<!--    <link rel="stylesheet" href="./css/animate.min.css" th:href="@{/css/animate.min.css}">-->
     <link rel="stylesheet" href="./css/me.css" th:href="@{/css/me.css}">
-<!--    <link rel="stylesheet" href="./lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">-->
-<!--    <script src="./lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>-->
-<!--    <script src="./lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>-->
 </head>
 <body>
 <!--一级导航-->
@@ -23,14 +19,16 @@
             <a th:href="@{/admin/index}" href="#" class="m-item  item m-mobile-hide" th:classappend="${n==1}?'active'"><i class="mini home icon"></i>首页</a>
             <a th:href="@{/admin/types}" href="#" class="m-item  item m-mobile-hide" th:classappend="${n==2}?'active'"><i class="mini home icon"></i>分类</a>
             <a th:href="@{/admin/tags}" href="#" class="m-item  item m-mobile-hide" th:classappend="${n==3}?'active'"><i class="mini home icon"></i>标签</a>
+            <a th:href="@{/admin/footmark}" href="#" class="m-item  item m-mobile-hide" th:classappend="${n==4}?'active'">足迹</a>
+            <a th:href="@{#}" href="#" class="m-item  item m-mobile-hide" th:classappend="${n==5}?'active'"><i class="mini home icon"></i>关于</a>
 
 
 
             <div class="right menu m-item m-mobile-hide">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="../images/testgray.jpg" alt="" class="ui avatar image">
-                        jenny
+                        <img src="../images/imgAdmin.jpg" alt="" class="ui avatar image">
+                        chain
                     </div>
                     <i class="dropdown icon"> </i>
                     <div class="menu">
@@ -50,45 +48,5 @@
 
 
 <!--底部-->
-<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
-    <div class="ui center aligned container">
-        <div class="ui  inverted divided stackable grid">
-            <!-- 16份网格 为semantic-ui特点 -->
-            <div class="three wide inverted  column">
-                <img src="./images/testgray.jpg" alt="" class="ui rounded image" style="width: 100px;">
-            </div>
-            <div class="three wide column">
-                <div class="ui inverted header"><h4>最新博客</h4>
-                    <div class="ui inverted  link list">
-                        <a href="#" class="item ">用户故事</a>
-                        <a href="#" class="item">用户故事</a>
-                        <a href="#" class="item ">用户故事</a>
-                    </div>
-                </div>
-            </div>
-            <div class="three wide column">
-                <div class="ui inverted header">最新博客
-                    <div class="ui  link list">
-                        <a href="#" class="item">用户故事</a>
-                        <a href="#" class="item">用户故事</a>
-                        <a href="#" class="item">用户故事</a>
-                    </div>
-                </div>
-            </div>
-            <div class="seven wide column">
-                这是我的个人博客
-            </div>
-        </div>
-
-
-        <div>
-            <div class="ui inverted section divider  ">
-                <p class="m-text-thin m-text-spaced m-opacity-mini"> copyright </p>
-            </div>
-        </div>
-
-    </div>
-
-</footer>
 </body>
 </html>
