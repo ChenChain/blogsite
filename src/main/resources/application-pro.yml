@@ -1,5 +1,3 @@
-
-
 spring:
   datasource:
     password: cc123456
@@ -12,14 +10,18 @@ spring:
 
 logging:
   level:
-    root: info #springboot������  Ĭ��info
-    com.chain.blog: info
+    root: warn #springboot������  Ĭ��info
+    com.chain.blog: warn
 #  file:
 #    path: log/blog.log #��־�ļ�λ��
 server:
-  port: 80
+  port: 8080
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.chain.blog.entity
 
-imgPath: file:/home/
+
+#本地图片保存路径
+imgPath: /web/img/
+#本地图片显示URL
+imgPathUrl: http://47.98.135.4:8080/img/

@@ -5,7 +5,7 @@ spring:
     suffix: .html
     cache: false
   profiles:
-    active: dev
+    active: pro
 
 
 #
