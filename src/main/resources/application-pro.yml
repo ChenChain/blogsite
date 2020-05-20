@@ -1,9 +1,9 @@
 spring:
   datasource:
-    password: cc123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.98.135.4:3306/chain?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&autoReconnect=true
-    username: root
+del the user name & pwd
+
+
 
 
 
@@ -24,4 +24,4 @@ mybatis:
 #本地图片保存路径
 imgPath: /web/img/
 #本地图片显示URL
-imgPathUrl: http://47.98.135.4:8080/img/
+
