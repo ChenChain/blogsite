@@ -1,6 +1,6 @@
 spring:
   datasource:
-    password: 123456
+    password:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost/chain?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&autoReconnect=true
     username: root
